@@ -1,0 +1,148 @@
+/* Your original styles unchanged */
+
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: #ffe4ec;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: #fff0f5;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px pink;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+h1 {
+  color: #ff69b4;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* New style for the time input */
+input[type="time"] {
+  padding: 10px;
+  border: 2px solid #ffb6c1;
+  border-radius: 10px;
+  font-size: 16px;
+  width: 130px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="time"]:focus {
+  outline: none;
+  border-color: #ff1493;
+  box-shadow: 0 0 6px #ff1493;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #ffb6c1;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #ff1493;
+  box-shadow: 0 0 6px #ff1493;
+}
+
+button {
+  background: #ff69b4;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+button:hover,
+button:focus {
+  background: #ff1493;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background: #fff;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px dashed #ffb6c1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  animation: fadeIn 0.4s ease;
+}
+
+li:hover {
+  background-color: #ffe0f0;
+  transform: scale(1.02);
+}
+
+li.completed {
+  text-decoration: line-through;
+  background-color: #ffe4e1;
+  color: #a05268;
+}
+
+li button {
+  margin-left: 10px;
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+li button:first-child {
+  background-color: #87d068; /* green-ish for Done/Undo */
+  color: white;
+}
+
+li button:first-child:hover,
+li button:first-child:focus {
+  background-color: #66bb6a;
+  outline: none;
+}
+
+li button:last-child {
+  background-color: #ff6b6b; /* red-ish for Delete */
+  color: white;
+}
+
+li button:last-child:hover,
+li button:last-child:focus {
+  background-color: #e55a5a;
+  outline: none;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(8px);}
+  to {opacity: 1; transform: translateY(0);}
+}
